@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration Form</title>
+    <link href="formValidations.css" rel="stylesheet">
+</head>
+
+<body>
+    <form name="registrationForm" id="registrationForm" onsubmit="event.preventDefault();formValidation()">
+        <table class="formTable">
+            <tr>
+                <th colspan="2" class="heading">REGISTRATION FORM</th>
+            </tr>
+            <tr>
+                <td> User Name<span class="colon">:</span></td>
+                <td> <input name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td> Email<span class="colon">:</span> </td>
+                <td><input name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td> Contact No<span class="colon">:</span></td>
+                <td><input name="contactNo" id="contactNo"></td>
+            </tr>
+            <tr>
+                <td> Gender<span class="colon">:</span></td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="Male">Male &nbsp;
+                    <input type="radio" id="female" name="gender" value="Female">Female
+                </td>
+            </tr>
+            <tr>
+                <td> Course<span class="colon">:</span></td>
+                <td>
+                    <input type="checkbox" id="react" name="course" value="React">ReactJS&nbsp;
+                    <input type="checkbox" id="node" name="course" value="Node">NodeJS&nbsp;
+                    <input type="checkbox" id="mongo" name="course" value="Mongo">MongoDB
+                </td>
+            </tr>
+
+            <tr>
+                <td> Age<span class="colon">:</span></td>
+                <td>
+                    <select name="age" id="age">
+                        <option value="less18">
+                            < 18 Yrs</option>
+                        <option value="18to25">18 Yrs - 25 Yrs</option>
+                        <option value="26to40">26 Yrs - 40 Yrs</option>
+                        <option value="41to50">41 Yrs - 50 Yrs</option>
+                        <option value="more50"> > 50 Yrs</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td> Address<span class="colon">:</span></td>
+                <td><textarea id="address" name="address" rows="4" cols="20"></textarea> </td>
+            </tr>
+            <tr>
+                <th class="button"><input class="resetButton" type="reset" value="Reset"></th>
+                <th class="button"><input id="edit" class="subButton" type="submit"></th>
+            </tr>
+        </table>
+
+        <table class="resultTable" id="resultTable">
+            <tr>
+                <th colspan="5" class="heading">REGISTRATION FORM DETAILS</th>
+            </tr>
+            <tr>
+                <td class="result"> User Name</td>
+                <td class="result"> Email</td>
+                <td class="result"> Contact No</td>
+                <td class="result"> Course</td>
+                <td class="result"> Action</td>
+            </tr>
+            <!-- <tr>
+                    <td id="userRes" class="result"></td>
+                    <td id="emailRes" class="result"></td>
+                    <td id="contactRes" class="result"></td>
+                    <td id="courseRes" class="result"></td>
+                    <td id="actionRes" class="result">
+                    <u class="edit" onclick="editForm()">Edit</u> &nbsp; <u class="delete" onclick="deleteForm()">Delete</u>
+                    </td>
+                </tr>   -->
+        </table>
+    </form>
+
+
+
+    <script src="formValidations.js"></script>
+</body>
+
+</html>
